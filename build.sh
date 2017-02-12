@@ -22,4 +22,4 @@ rm dist/css/bundle.css
 
 mkdir bucket
 
-zip -rT ./bucket/dist.zip dist 
+# zip -rT ./bucket/dist.zip dist 
