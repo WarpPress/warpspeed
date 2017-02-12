@@ -8,7 +8,7 @@ mkdir dist/fonts
 mkdir dist/img
 
 cp -R src/img dist
-cp -R src/fonts dist/fonts
+cp -R src/fonts dist
 cp src/index.html dist/index.html
 
 cat src/js/materialize.js src/js/init.js > dist/js/bundle.js
