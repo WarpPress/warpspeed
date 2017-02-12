@@ -1,0 +1,31 @@
+{
+  "name": "warpspeed",
+  "version": "1.0.0",
+  "description": "WarpSpeed.site Performance Optimization",
+  "main": "index.js",
+  "dependencies": {
+    "clean-css": "^4.0.6",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "minifier": "^0.8.1",
+    "uglifycss": "0.0.25",
+    "uglifyjs": "^2.4.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warppress/warpspeed.git"
+  },
+  "keywords": [
+    "WarpSpeed"
+  ],
+  "author": "WarpPress.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/warppress/warpspeed/issues"
+  },
+  "homepage": "https://github.com/warppress/warpspeed#readme"
+}
