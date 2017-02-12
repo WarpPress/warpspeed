@@ -1,4 +1,1 @@
-server.key
-server.crt
-server.csr
-node_modules
+./node_modules
