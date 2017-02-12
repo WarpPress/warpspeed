@@ -20,6 +20,6 @@ node_modules/uglifycss/uglifycss dist/css/bundle.css > dist/css/bundle.min.css
 rm dist/js/bundle.js
 rm dist/css/bundle.css
 
-mkdir bucket
+#mkdir bucket
 
-# zip -rT ./bucket/dist.zip dist 
+#zip -rT ./bucket/dist.zip dist 
