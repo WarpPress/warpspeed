@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -R dist
-rm -R bucket
+#rm -R bucket
 mkdir dist
 mkdir dist/css
 mkdir dist/js

@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="css/bundle.min.css" media="none" onload="if(media!='all')media='all'">
   <noscript><link rel="stylesheet" href="css/bundle.min.css"></noscript>
   <style type="text/css">
-     .loading{ position:fixed; z-index:3; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.5);}
+    div.hidden { display: none }
   </style>
 </head>
-<body class=".loading">
+<body>
+  <div id="ghost" class="hidden">
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">WarpSpeed</a>
       <ul class="right hide-on-med-and-down">
@@ -87,10 +88,10 @@
       <div id="pricing" class="row">
       </div>
 
-      <div id="pricing" class="row">
+      <div id="about" class="row">
       </div>
 
-      <div id="pricing" class="row">
+      <div id="contact" class="row">
       </div>
 
     </div>
@@ -137,6 +138,6 @@
     ga('send', 'pageview');
 
   </script>
-
+  </div>
   </body>
 </html>
