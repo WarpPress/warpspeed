@@ -7,7 +7,15 @@
   <title>WarpSpeed - Website Performance</title>
 
   <!-- CSS  -->
-  <link href="css/bundle.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script>
+  (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.src = 'css/bundle.min.css';
+    s.parentNode.insertBefore(g, s);
+}(document, 'style'));
+</script>
+
 </head>
 <body>
   <nav class="light-blue lighten-1" role="navigation">
