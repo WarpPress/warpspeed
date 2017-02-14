@@ -1,18 +1,3 @@
-(function($){
-  $(function(){
-
-    $('.button-collapse').sideNav();
-    
-    $(document).ready(function() {
-        $("div#ghost").removeClass("hidden");
-    });
-
-    
-
-
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
-
  $("#contact-form").submit(function (event) {
      event.preventDefault();
      var name = $('#name').val();
@@ -34,15 +19,22 @@
          },
          success: function (res) {
              console.log(res.status);
-             $('#contact').fadeOut("slow");
+            //  $('#contact').fadeOut("slow", function () {
 
-             if (res.status != 403) {
-                 Materialize
-                 .toast('<h6>Thank you, ' + name + '. An engineer will get back to you ASAP.</h6>', 10000);
-             } else {
-                 Materialize
-                 .toast('<h6>Thank you, ' + name + '. Our system is down for maintenance or development. Please contact chad@sentigence.com.</h6>', 10000);
-             }
+            //  });
+
+            //  if (res.status != 403) {
+            //      Materialize.toast(
+            //          `
+            //         <h6>Thank you, ${name}. An engineer will get back to you ASAP.</h6>        
+            //         `, 10000);
+            //  } else {
+            //      Materialize.toast(
+            //          `
+            //         <h6>Thank you, ${name}. Our system is down for maintenance or development. Please contact chad@sentigence.com.</h6>        
+            //         `, 10000);
+
+            //  }
          },
          error: function () {
              console.log("error");

@@ -11,6 +11,7 @@
   <style type="text/css">
     div.hidden { display: none }
   </style>
+  
 </head>
 <body>
   <div id="ghost" class="hidden">
@@ -90,41 +91,47 @@
       <div id="about" class="row">
       </div>
 
-      <div id="contact" class="row">
-        <form id="contact-form" class="col s6 offset-s3">
+      <div id="contact">
+        <h4 class="center">Let us send you a free proposal</h4>  
+        <div class="row card">
+        <br><br>
+        <div class="card-content ">
+        <form id="contact-form" class="col s12 offset-m1 m12">
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12 m5">
                 <input placeholder="Your Name" id="name" type="text" class="validate" required="" aria-required="true">
                 <label for="website">Name</label>
               </div>
-                <div class="input-field col s6">
+                <div class="input-field col s12 m5">
                 <input placeholder="Company Name" id="coname" type="text" class="validate" required="" aria-required="true" >
                 <label for="email">Company Name</label>
               </div>
             </div>
 
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field col s12 m5">
                 <input placeholder="http://www.mywebsite.com" id="website" type="text" class="validate" required="" aria-required="true">
                 <label for="website">Website</label>
               </div>
-              <div class="input-field col s6">
+              <div class="input-field col s12 m5">
                 <input placeholder="contact@myweb.com" id="email" type="email" class="validate" required="" aria-required="true">
                 <label for="email">Contact email</label>
               </div>
             </div>
             <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="description" class="materialize-textarea" length="140"></textarea>
+                  <div class="input-field col s12 m10">
+                    <textarea id="goals" class="materialize-textarea" length="140"></textarea>
                     <label for="description">Your Goals</label>
                   </div>
             </div>
             <div class="row">
-              <div class="col s12">
+              <div class="col s12 m10">
                 <button id="contact-btn" class="btn waves-effect waves-light">Submit</button>
               </div>
             </div>
         </form>
+        </div>
+        </div>
       </div>
    </div>
   </div>
@@ -168,56 +175,6 @@
 
     ga('create', 'UA-91834002-1', 'auto');
     ga('send', 'pageview');
-
-  </script>
-
-  <script>
-      $( "#contact-form" ).submit(function( event ) {
-    
-      event.preventDefault();
-    
-      var $form = $( this ),
-        name = $form.find( "name" ).val(),
-        coname = $form.find( "coname" ).val(),
-        website = $form.find( "website" ).val(),
-        email = $form.find( "email" ).val(),
-        goals = $form.find( "goals" ).val();
-
-    
-      var posting = $.ajax({
-            url: 'https://moneybean.co/contact',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            type: "POST", /* or type:"GET" or type:"PUT" */
-            dataType: "json",
-            data: {
-                name: name,
-                coname: coname,
-                website: website,
-                email: email,
-                goals: goals
-            },
-            success: function (result) {
-                console.log(result);    
-            },
-            error: function () {
-                console.log("error");
-            }
-        });
-
-    
-      posting.done(function( res ) {
-        console.log(JSON.stringify(res))
-        $('#contact').fadeOut("slow", function() {
-
-        });
-        Materialize.toast(
-          `
-           <h6>Thank you! Adam or Chad will get back to you ASAP.</h6>        
-          `, 10000)
-      });
-    });
   
   </script>
   </div>
